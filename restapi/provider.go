@@ -57,8 +57,8 @@ func Provider() *schema.Provider {
 			"id_attribute": {
 				Type:        schema.TypeString,
 				Optional:    true,
-				DefaultFunc: schema.EnvDefaultFunc("REST_API_ID_ATTRIBUTE", nil),
-				Description: "When set, this key will be used to operate on REST objects. For example, if the ID is set to 'name', changes to the API object will be to http://foo.com/bar/VALUE_OF_NAME. This value may also be a '/'-delimeted path to the id attribute if it is multple levels deep in the data (such as `attributes/id` in the case of an object `{ \"attributes\": { \"id\": 1234 }, \"config\": { \"name\": \"foo\", \"something\": \"bar\"}}`",
+				DefaultFunc: schema.EnvDefaultFunc("REST_API_ID_ATTRIBUTE", "metadata/name"),
+				Description: "Default set for F5 XC API, this key will be used to operate on REST objects. For example, if the ID is set to 'name', changes to the API object will be to http://foo.com/bar/VALUE_OF_NAME. This value may also be a '/'-delimeted path to the id attribute if it is multple levels deep in the data (such as `attributes/id` in the case of an object `{ \"attributes\": { \"id\": 1234 }, \"config\": { \"name\": \"foo\", \"something\": \"bar\"}}`",
 			},
 			"create_method": {
 				Type:        schema.TypeString,

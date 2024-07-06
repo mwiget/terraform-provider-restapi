@@ -1,4 +1,4 @@
-module github.com/Mastercard/terraform-provider-restapi
+module github.com/mwiget/terraform-provider-restapi
 
 go 1.18
 
